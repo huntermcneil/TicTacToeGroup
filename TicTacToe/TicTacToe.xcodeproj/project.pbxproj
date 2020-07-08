@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		52E5671524B66B0C00FEA1A6 /* TictactoeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E5671424B66B0C00FEA1A6 /* TictactoeController.swift */; };
 		61EFD9E924B640CF00DB0DE9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61EFD9E824B640CF00DB0DE9 /* AppDelegate.swift */; };
 		61EFD9EB24B640CF00DB0DE9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61EFD9EA24B640CF00DB0DE9 /* SceneDelegate.swift */; };
 		61EFD9ED24B640CF00DB0DE9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61EFD9EC24B640CF00DB0DE9 /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		52E5671424B66B0C00FEA1A6 /* TictactoeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TictactoeController.swift; sourceTree = "<group>"; };
 		61EFD9E524B640CF00DB0DE9 /* TicTacToe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TicTacToe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61EFD9E824B640CF00DB0DE9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		61EFD9EA24B640CF00DB0DE9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +41,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		52E5671224B66AED00FEA1A6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				52E5671324B66AF300FEA1A6 /* Model Controller */,
+				61EFD9FE24B6412E00DB0DE9 /* View Controller */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		52E5671324B66AF300FEA1A6 /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+				52E5671424B66B0C00FEA1A6 /* TictactoeController.swift */,
+			);
+			path = "Model Controller";
+			sourceTree = "<group>";
+		};
 		61EFD9DC24B640CF00DB0DE9 = {
 			isa = PBXGroup;
 			children = (
@@ -59,9 +78,9 @@
 			isa = PBXGroup;
 			children = (
 				DA8CC65C24B647C5005E3FE2 /* Model */,
-				61EFD9FC24B6411300DB0DE9 /* Resources */,
-				61EFD9FE24B6412E00DB0DE9 /* View Controller */,
 				61EFD9FD24B6412500DB0DE9 /* Views */,
+				52E5671224B66AED00FEA1A6 /* Controller */,
+				61EFD9FC24B6411300DB0DE9 /* Resources */,
 			);
 			path = TicTacToe;
 			sourceTree = "<group>";
@@ -175,6 +194,7 @@
 			files = (
 				61EFD9ED24B640CF00DB0DE9 /* ViewController.swift in Sources */,
 				61EFD9E924B640CF00DB0DE9 /* AppDelegate.swift in Sources */,
+				52E5671524B66B0C00FEA1A6 /* TictactoeController.swift in Sources */,
 				DA8CC65E24B64C39005E3FE2 /* TicTacToe.swift in Sources */,
 				61EFD9EB24B640CF00DB0DE9 /* SceneDelegate.swift in Sources */,
 			);
