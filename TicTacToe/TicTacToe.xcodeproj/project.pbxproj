@@ -13,6 +13,7 @@
 		61EFD9F024B640CF00DB0DE9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61EFD9EE24B640CF00DB0DE9 /* Main.storyboard */; };
 		61EFD9F224B640D100DB0DE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61EFD9F124B640D100DB0DE9 /* Assets.xcassets */; };
 		61EFD9F524B640D100DB0DE9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61EFD9F324B640D100DB0DE9 /* LaunchScreen.storyboard */; };
+		DA8CC65E24B64C39005E3FE2 /* TicTacToe.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8CC65D24B64C39005E3FE2 /* TicTacToe.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		61EFD9F124B640D100DB0DE9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		61EFD9F424B640D100DB0DE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		61EFD9F624B640D100DB0DE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA8CC65D24B64C39005E3FE2 /* TicTacToe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToe.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		61EFD9E724B640CF00DB0DE9 /* TicTacToe */ = {
 			isa = PBXGroup;
 			children = (
+				DA8CC65C24B647C5005E3FE2 /* Model */,
 				61EFD9FC24B6411300DB0DE9 /* Resources */,
 				61EFD9FE24B6412E00DB0DE9 /* View Controller */,
 				61EFD9FD24B6412500DB0DE9 /* Views */,
@@ -89,6 +92,14 @@
 				61EFD9EC24B640CF00DB0DE9 /* ViewController.swift */,
 			);
 			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		DA8CC65C24B647C5005E3FE2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DA8CC65D24B64C39005E3FE2 /* TicTacToe.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,6 +175,7 @@
 			files = (
 				61EFD9ED24B640CF00DB0DE9 /* ViewController.swift in Sources */,
 				61EFD9E924B640CF00DB0DE9 /* AppDelegate.swift in Sources */,
+				DA8CC65E24B64C39005E3FE2 /* TicTacToe.swift in Sources */,
 				61EFD9EB24B640CF00DB0DE9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
