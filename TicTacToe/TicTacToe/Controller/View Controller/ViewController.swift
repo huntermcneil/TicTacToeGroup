@@ -21,7 +21,18 @@ class ViewController: UIViewController {
     }
     
     @IBAction func ticTacToeButtonTapped(_ sender: UIButton) {
-        sender.setImage(TictactoeController.shared.checkingActivePlayer(), for: .normal)
+        var shared = TictactoeController.shared.tictactoe
+        if (shared.gameState[sender.tag-1] == 0 && shared.gameIsActive == true) {
+            shared.gameState[sender.tag-1] = shared.activePlayer
+            if (shared.activePlayer == 1) {
+                sender.setImage(UIImage(named: "tictactoeX"), for: UIControl.State())
+                shared.activePlayer = 2
+            } else {
+                sender.setImage(UIImage(named: "tictactoeO"), for: UIControl.State())
+                shared.activePlayer = 1
+            }
+        }
+//        sender.setImage(TictactoeController.shared.checkingActivePlayer(), for: .normal)
         TictactoeController.shared.checkingTheWinner(label: winnerLabel, button: playAgainButton)
         winnerLabel.text = TictactoeController.shared.tictactoe.winner
     }
