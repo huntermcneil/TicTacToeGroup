@@ -18,17 +18,18 @@ class TictactoeController {
 
     func checkingActivePlayer() -> UIImage {
         if tictactoe.activePlayer == 1 {
-            if let image = UIImage(named: "tictactoeO") { return image }
+            guard let image = UIImage(named: "tictactoeO") else {return UIImage()}
             tictactoe.activePlayer = 2
+            return image
         } else {
-            if let image = UIImage(named: "tictactoeX") { return image }
+            guard let image = UIImage(named: "tictactoeX") else {return UIImage()}
             tictactoe.activePlayer = 1
+            return image
         }
-        return UIImage()
     }
     
     //MARK: - Checking winner
-    func checkingTheWinner() {
+    func checkingTheWinner(label: UILabel, button: UIButton) {
         
         for winnerCombination in tictactoe.winningCombination {
             
@@ -38,13 +39,21 @@ class TictactoeController {
                 tictactoe.gameIsActive = false
                 
                 if tictactoe.gameState[winnerCombination[0]] == 1 {
-                    tictactoe.winner = "Cross has won"
-                } else { tictactoe.winner = "Circle has won"}
+                    label.text = "Cross has won!"
+                } else {
+                    label.text = "Circle has won!"
+                }
                 
                 if tictactoe.gameIsActive == true {
-                    for i in tictactoe.gameState { tictactoe.count = 1*tictactoe.count }
-                    if tictactoe.count != 0 { tictactoe.winner = "Circle has won" }
+                    for i in tictactoe.gameState { tictactoe.count = i*tictactoe.count }
+                    if tictactoe.count != 0 {
+                        tictactoe.winner = "It was a draw!"
+                        label.text = "\(tictactoe.winner)"
+                        button.isHidden = false
+                    }
                 }
+                button.isHidden = false
+                label.isHidden = false
             }
         }
     }
@@ -55,7 +64,7 @@ class TictactoeController {
         tictactoe.gameIsActive = true
         tictactoe.activePlayer = 1
         
-        for i  in 1...9 {
+        for i in 1...9 {
             let button  = view.viewWithTag(i) as? UIButton
             button?.setImage(nil, for: UIControl.State())
         }

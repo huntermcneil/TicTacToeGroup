@@ -24,51 +24,78 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="cBe-WX-VRh">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="142.5"/>
                                         <subviews>
-                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a3j-zu-jxW">
+                                            <button opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a3j-zu-jxW">
                                                 <rect key="frame" x="0.0" y="0.0" width="131.5" height="142.5"/>
                                                 <state key="normal">
                                                     <color key="titleColor" red="0.60510832069999998" green="0.1105642691" blue="0.121531941" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="ticTacToeButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eER-9n-qrH"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S9G-AZ-iu6">
+                                            <button opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S9G-AZ-iu6">
                                                 <rect key="frame" x="141.5" y="0.0" width="131" height="142.5"/>
+                                                <connections>
+                                                    <action selector="ticTacToeButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BRb-EA-tyc"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9JV-vj-mTY">
+                                            <button opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9JV-vj-mTY">
                                                 <rect key="frame" x="282.5" y="0.0" width="131.5" height="142.5"/>
                                                 <state key="normal" image="tictactoeX"/>
+                                                <connections>
+                                                    <action selector="ticTacToeButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="psv-H6-BA7"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="arb-l8-IYe">
                                         <rect key="frame" x="0.0" y="152.5" width="414" height="143"/>
                                         <subviews>
-                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8da-j2-OAu">
+                                            <button opaque="NO" clipsSubviews="YES" tag="4" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8da-j2-OAu">
                                                 <rect key="frame" x="0.0" y="0.0" width="131.5" height="143"/>
+                                                <connections>
+                                                    <action selector="ticTacToeButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rqf-0I-Z1H"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RAx-Ax-bTd">
+                                            <button opaque="NO" clipsSubviews="YES" tag="5" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RAx-Ax-bTd">
                                                 <rect key="frame" x="141.5" y="0.0" width="131" height="143"/>
                                                 <state key="normal">
                                                     <color key="titleColor" red="0.36300460610000002" green="0.76965883820000003" blue="0.58297831820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="ticTacToeButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RI2-Jb-721"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8OI-6L-pYc">
+                                            <button opaque="NO" clipsSubviews="YES" tag="6" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8OI-6L-pYc">
                                                 <rect key="frame" x="282.5" y="0.0" width="131.5" height="143"/>
+                                                <connections>
+                                                    <action selector="ticTacToeButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7uT-MR-9Mg"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="STp-DP-Isz">
                                         <rect key="frame" x="0.0" y="305.5" width="414" height="142.5"/>
                                         <subviews>
-                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BUQ-eF-plx">
+                                            <button opaque="NO" clipsSubviews="YES" tag="7" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BUQ-eF-plx">
                                                 <rect key="frame" x="0.0" y="0.0" width="131.5" height="142.5"/>
+                                                <connections>
+                                                    <action selector="ticTacToeButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gf8-x2-FWs"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9h7-4Q-u5f">
+                                            <button opaque="NO" clipsSubviews="YES" tag="8" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9h7-4Q-u5f">
                                                 <rect key="frame" x="141.5" y="0.0" width="131" height="142.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                 <state key="normal" image="tictactoeO"/>
+                                                <connections>
+                                                    <action selector="ticTacToeButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jsk-6i-D37"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vps-Ct-jsB">
+                                            <button opaque="NO" clipsSubviews="YES" tag="9" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vps-Ct-jsB">
                                                 <rect key="frame" x="282.5" y="0.0" width="131.5" height="142.5"/>
+                                                <connections>
+                                                    <action selector="ticTacToeButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zVL-At-2mR"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -80,12 +107,15 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J7E-KQ-IMV">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="55"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c74-TC-76i">
                                         <rect key="frame" x="0.0" y="70" width="334" height="55"/>
-                                        <state key="normal" title="Button"/>
+                                        <state key="normal" title="Play Again"/>
+                                        <connections>
+                                            <action selector="playAgainButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eTp-nB-Oaj"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -107,10 +137,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="playAgainButton" destination="c74-TC-76i" id="ckh-J7-8A4"/>
+                        <outlet property="winnerLabel" destination="J7E-KQ-IMV" id="aZf-SO-PQD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
+            <point key="canvasLocation" x="158" y="92"/>
         </scene>
     </scenes>
     <resources>
