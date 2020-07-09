@@ -15,37 +15,35 @@ class TictactoeController {
     
     //MARK: - S.O.T
     var tictactoe = TicTacToe()
-
-//    func checkingActivePlayer(button: UIButton) -> UIImage {
-//        if (tictactoe.gameState[button.tag-1] == 0 && tictactoe.gameIsActive == true) {
-//            tictactoe.gameState[button.tag-1] = tictactoe.activePlayer
-//        if tictactoe.activePlayer == 1 {
-//            guard let image = UIImage(named: "tictactoeO") else {return UIImage()}
-//            tictactoe.activePlayer = 2
-//            return image
-//        } else {
-//            guard let image = UIImage(named: "tictactoeX") else {return UIImage()}
-//            tictactoe.activePlayer = 1
-//            return image
-//            }
-//        }
-//    }
-
+    
     
     //MARK: - Checking winner
     func checkingTheWinner(label: UILabel, button: UIButton) {
+        
+        if (tictactoe.gameState[button.tag-1] == 0 && tictactoe.gameIsActive == true) {
+            
+            tictactoe.gameState[button.tag-1] = tictactoe.activePlayer
+            if tictactoe.activePlayer == 1 {
+                button.setImage(UIImage(named: tictactoe.imageX), for: .normal)
+                tictactoe.activePlayer = 2
+            } else {
+                button.setImage(UIImage(named: tictactoe.imageO), for: .normal)
+                tictactoe.activePlayer = 1
+            }
+        }
+        
         for winnerCombination in tictactoe.winningCombination {
             
-            if tictactoe.gameState[winnerCombination[0]] != 0 &&
+            if  tictactoe.gameState[winnerCombination[0]] != 0 &&
                 tictactoe.gameState[winnerCombination[0]] == tictactoe.gameState[winnerCombination[1]] &&
-                tictactoe.gameState[winnerCombination[1]] == tictactoe.gameState[winnerCombination[2]]
-            {
+                tictactoe.gameState[winnerCombination[1]] == tictactoe.gameState[winnerCombination[2]] {
                 tictactoe.gameIsActive = false
                 
-                if tictactoe.gameState[winnerCombination[0]] == 1 {
-                    label.text = "Cross has won!"
-                } else {
+                if tictactoe.gameState[winnerCombination[0]] == 1 { label.text = "Cross has won!"
+                } else if tictactoe.gameState[winnerCombination[0]] == 2 {
                     label.text = "Circle has won!"
+                } else {
+                    label.text = "You Tied"
                 }
                 
                 if tictactoe.gameIsActive == true {

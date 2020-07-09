@@ -9,34 +9,22 @@
 import UIKit
 
 class ViewController: UIViewController {
-
     
+    //MARK: - IBoutlets
     @IBOutlet weak var winnerLabel: UILabel!
     @IBOutlet weak var playAgainButton: UIButton!
     
-    
+    //MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
     }
     
+    //MARK: - IBActions
     @IBAction func ticTacToeButtonTapped(_ sender: UIButton) {
-        var shared = TictactoeController.shared.tictactoe
-        if (shared.gameState[sender.tag-1] == 0 && shared.gameIsActive == true) {
-            shared.gameState[sender.tag-1] = shared.activePlayer
-            if (shared.activePlayer == 1) {
-                sender.setImage(UIImage(named: "tictactoeX"), for: UIControl.State())
-                shared.activePlayer = 2
-            } else {
-                sender.setImage(UIImage(named: "tictactoeO"), for: UIControl.State())
-                shared.activePlayer = 1
-            }
-        }
-//        sender.setImage(TictactoeController.shared.checkingActivePlayer(), for: .normal)
-        TictactoeController.shared.checkingTheWinner(label: winnerLabel, button: playAgainButton)
-        winnerLabel.text = TictactoeController.shared.tictactoe.winner
+        TictactoeController.shared.checkingTheWinner(label: winnerLabel, button: sender)
     }
-
+    
     @IBAction func playAgainButtonTapped(_ sender: Any) {
         TictactoeController.shared.resetingGamerBoard(view: self.view)
     }
