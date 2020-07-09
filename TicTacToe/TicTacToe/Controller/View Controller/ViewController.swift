@@ -27,7 +27,8 @@ class ViewController: UIViewController {
     
     @IBAction func playAgainButtonTapped(_ sender: Any) {
         TictactoeController.shared.resetingGamerBoard(view: self.view)
+        winnerLabel.text = "X goes first."
     }
-    
+
 }
 

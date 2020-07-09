@@ -40,11 +40,7 @@ class TictactoeController {
                 tictactoe.gameIsActive = false
                 
                 if tictactoe.gameState[winnerCombination[0]] == 1 { label.text = "Cross has won!"
-                } else if tictactoe.gameState[winnerCombination[0]] == 2 {
-                    label.text = "Circle has won!"
-                } else {
-                    label.text = "You Tied"
-                }
+                } else  { label.text = "Circle has won!" }
                 
                 if tictactoe.gameIsActive == true {
                     for i in tictactoe.gameState { tictactoe.count = i*tictactoe.count }
